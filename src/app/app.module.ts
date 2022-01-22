@@ -4,28 +4,25 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-@NgModule({
-  declarations: [
-    MyApp,
+@NgModule({  //Ele quem é o Módulo.
+  declarations: [  //Lista de páginas
+    MyApp, 
     HomePage,
-    ListPage
   ],
-  imports: [
+  imports: [  //Módulos
     BrowserModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
-  entryComponents: [
+  entryComponents: [  
     MyApp,
     HomePage,
-    ListPage
   ],
-  providers: [
+  providers: [  //Declarar as classes em que os objetos injetados serão uma instância única para o módulo
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
